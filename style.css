@@ -1,0 +1,1381 @@
+/* --- Diseño base --- */ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --orange: #ff6600;
+  --dark: #222;
+  --light: #fff;
+  --gray: #666;
+  --font-title: 'Comfortaa', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+body {
+  font-family: var(--font-body);
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}.banda-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.banda-video {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* limita la altura en móvil */
+  object-fit: cover;
+}
+@media (min-width: 768px) {
+  .banda-video {
+    max-height: 500px; /* más alto en escritorio */
+  }
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header 
+header {
+  background: var(--light);
+  border-bottom: 1px solid #eee;
+  padding: 0;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+/* Añade esta regla para el logo-container */
+.logo-container {
+  max-width: 300px;  /* Puedes cambiar este valor */
+  height: auto;      /* O si quieres altura fija, pon un valor como 100px */
+ margin: 0; /* o margin-left: 0; */
+  padding: 0px;     /* Espacio interno opcional */
+}
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--orange);
+}
+
+.logo__icon {
+  background: var(--orange);
+  color: var(--light);
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu a {
+  font-weight: 500;
+}
+
+.cta {
+  background: var(--orange);
+  color: var(--light);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.hamb {
+  display: none;
+}
+
+/* HERO */
+.hero {
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero__wrap {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  color: var(--orange);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.highlight {
+  color: var(--orange);
+}
+
+.hero p {
+  margin-bottom: 1.5rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: 2px solid var(--orange);
+  color: var(--orange);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn--fill {
+  background: var(--orange);
+  color: var(--light);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.grid-counters {
+  display: flex;
+  gap: 2rem;
+}
+
+.kpi b {
+  display: block;
+  font-size: 2rem;
+  font-family: var(--font-title);
+  color: var(--orange);
+}
+
+.kpi span {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* SECTIONS */
+section {
+  padding: 4rem 0;
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.head h2 {
+  font-family: var(--font-title);
+  font-size: 2rem;
+}
+
+.lead {
+  color: var(--gray);
+  font-size: 1.1rem;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.tag {
+  color: var(--orange);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.cases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.case__body {
+  margin-top: 1rem;
+}
+
+.pill {
+  background: var(--orange);
+  color: var(--light);
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.step b {
+  font-size: 2rem;
+  color: var(--orange);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* SLIDER */
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+/* CTA */
+.cta-band {
+  background: var(--orange);
+  color: var(--light);
+  padding: 3rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.cta-band h2 {
+  font-family: var(--font-title);
+  margin-bottom: 1rem;
+}
+
+/* FOOTER */
+footer {
+  background: #f5f5f5;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.foot {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+footer h4 {
+  font-family: var(--font-title);
+  margin-bottom: 0.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: var(--light);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .hamb {
+    display: block;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero__wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-counters {
+    justify-content: center;
+  }
+}
+/* === Logo como imagen === */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+/* Logo como imagen */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+.header_logo img {
+  height: auto;
+  max-height: 65px; /* Máximo en escritorio */
+  width: auto;
+  max-width: 50px; /* Límite en ancho */
+  object-fit: contain; /* Mantiene proporciones */
+  display: block;
+  margin: 0; /* Quita centrado */
+}
+
+/* En móvil el logo será más pequeño */
+@media (max-width: 768px) {
+  .header_logo img {
+    max-height: 45px; /* Máximo en móvil */
+    max-width: 50px;
+  }
+}
+/* ← Esta es la última llave de tu CSS actual */
+
+/* Ajuste para video en el hero */
+.hero__media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ticker {
+    position: absolute;
+bottom: 0;
+
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.ticker-content {
+    display: inline-block;
+    white-space: nowrap;
+    color: var(--orange);
+    font-size: 1.2rem;
+    padding: 10px;
+    animation: tickerMove 15s linear infinite;
+}
+
+@keyframes tickerMove {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.banner-video {
+    height: 200px; /* Ajusta el alto del banner */
+    overflow: hidden;
+    position: relative; /* Mantiene el video dentro del contenedor */
+}
+
+.banner-video video 
+    position absolute
+    top
+    left 
+    min-width 
+    min-height 
+    transform translate-50
+    object-fit cover/* Recorta sin deformar */
+/* Fondo de red de conexión */
+#network-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Detrás del vídeo */
+    background: transparent;
+}
+
+
+/* Tipografía (igual que en tu imagen) */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sección de planes */
+.planes {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.titulo-planes {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+/* Contenedor flexible */
+.contenedor-planes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Tarjetas individuales */
+.card-plan {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px 20px;
+  width: 300px;
+  text-align: left;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card-plan:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos */
+.card-plan h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.card-plan h3 span {
+  color: #ff6600;
+}
+
+/* Precio */
+.precio {
+  background: #fff;
+  color: #ff6600;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* Lista */
+.card-plan ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-plan ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 0;
+  font-size: 0.95rem;
+}
+
+/* Colores llamativos por plan */
+.plan1 {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* naranja coral */
+}
+
+.plan2 {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* violeta a azul */
+}
+
+.plan3 {
+  background: linear-gradient(135deg, #11998e, #38ef7d); /* verde vibrante */
+}
+
+.plan4 {
+  background: linear-gradient(135deg, #ff512f, #dd2476); /* rojo fucsia */
+}
+
+.plan5 {
+  background: linear-gradient(135deg, #24c6dc, #514a9d); /* azul cielo a morado */
+}
+
+.plan6 {
+  background: linear-gradient(135deg, #00b894, #55efc4); /* verde menta */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-plan {
+    width: 100%;
+  }
+}
+.titulo-sobre {
+  color: #ff6600;
+  font-weight: 700;
+  font-size: 2.2rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-bottom: 15px;
+}
+/* Contenedor de cajones */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilo de cada cajón */
+.service-card {
+    background: linear-gradient(145deg, #ffd1a3, #ffa366); /* Degradado naranja claro */
+    color: #333333; /* Texto gris oscuro */
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Títulos */
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* Párrafos */
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Brillo dinámico */
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-25deg);
+    transition: left 0.5s ease;
+}
+
+.service-card:hover::before {
+    left: 125%;
+}
+
+/* Hover básico */
+.service-card:hover {
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.2);
+}
+/* Brillo animado */
+.service-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+}
+
+/* Clase que activa el brillo */
+.service-card.shine::before {
+    animation: shineMove 1s ease-in-out;
+}
+
+/* Animación del brillo */
+@keyframes shineMove {
+    from { left: -75%; }
+    to { left: 125%; }
+}
+
+/* Pulso */
+.service-card.pulse {
+    animation: pulseEffect 0.6s ease-in-out;
+}
+
+@keyframes pulseEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+/* Redes Sociales - Parte inferior izquierda */
+.social-icons {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 18px;
+  z-index: 1000;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons svg {
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+.social-icons a:hover svg {
+  transform: scale(1.2);
+}
+
+.social-icons a:hover span {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Botón de WhatsApp - Parte inferior derecha */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.2);
+}
+.hero_form {
+    margin-top: 20px;
+}
+
+.hero_form form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.hero_form input[type="email"] {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    flex: 1;
+    min-width: 220px;
+}
+
+.hero_form button {
+    background-color: #ff6600; /* tu naranja */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.hero_form button:hover {
+    background-color: #e05500; /* un poco más oscuro al pasar mouse */
+}
+#sendBtn {
+    position: relative;
+    overflow: hidden;
+}
+
+#sendBtn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: skewX(-25deg);
+}
+
+#sendBtn.clicked::after {
+    animation: shine 0.5s ease;
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+/* --- Footer redes izq --- */
+.footer-social {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #ff6600;
+  text-decoration: none;
+  font-size: 18px;                 /* tamaño del texto */
+  background: rgba(255,255,255,0.9);
+  padding: 8px 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.12);
+  transition: transform .25s, color .25s, box-shadow .25s;
+  position: relative;
+  overflow: hidden;                 /* para ripple */
+}
+
+.social-link i {
+  font-size: 22px;                 /* tamaño del ícono */
+}
+
+/* --- WhatsApp der --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;                     /* a la derecha */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 30px;                 /* tamaño del ícono */
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  z-index: 1000;
+  transition: transform .25s, box-shadow .25s;
+  position: fixed;
+  overflow: hidden;                 /* para ripple */
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #25d366, 0 0 25px #25d366;
+}
+
+/* --- Destello (shine) al hover --- */
+.footer-social .social-link::after,
+.whatsapp-float::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.6) 50%, transparent 100%);
+  transform: rotate(20deg);
+  pointer-events: none;
+}
+
+.footer-social .social-link:hover::after,
+.whatsapp-float:hover::after {
+  animation: shine-sweep .8s ease forwards;
+}
+
+@keyframes shine-sweep {
+  from { left: -75%; }
+  to   { left: 125%; }
+}
+
+/* --- Ripple generado por JS --- */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: .45;
+  background: rgba(255, 102, 0, .35); /* naranja translúcido */
+  animation: ripple-out .6s ease-out forwards;
+}
+
+@keyframes ripple-out {
+  to { transform: scale(8); opacity: 0; }
+}
+
+/* Pulso leve en WhatsApp (llama atención) */
+.whatsapp-float.pulse {
+  animation: wa-pulse 2.2s ease-in-out infinite;
+}
+@keyframes wa-pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,.45); }
+  50%     { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+}
+.cajones-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  font-family: 'Poppins', sans-serif; /* Igual a tu página */
+}
+
+.cajon {
+  background: linear-gradient(135deg, #ff7300, #ffb347); /* Naranja similar */
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulso 2s infinite;
+}
+
+.cajon h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.cajon p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.cajon:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+}
+
+@keyframes pulso {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+.cajon {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.cajon.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
+.cajones-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.cajon {
+  background: linear-gradient(135deg, #ff6a00, #ff9900);
+  color: white;
+  font-family: inherit; /* usa la misma tipografía que tu web */
+  border-radius: 20px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cajon .numero {
+  font-size: 2rem;
+  font-weight: bold;
+  background: rgba(255,255,255,0.2);
+  padding: 10px 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.cajon p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.cajon:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.cajon::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255,255,255,0.1);
+  transform: rotate(45deg);
+  animation: brillo 3s infinite;
+}
+
+@keyframes brillo {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+/* Estado inicial de cajones (ocultos) */
+.cajon {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+/* Cuando entran en pantalla */
+.cajon.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pulso para WhatsApp */
+.whatsapp-float.pulse {
+  animation: wa-pulse 2.2s ease-in-out infinite;
+}
+@keyframes wa-pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(37,211,102,.45); }
+  50%     { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+}
+.cajones-proceso {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.cajon-proceso {
+    flex: 1 1 calc(25% - 20px);
+    min-width: 220px;
+    background: linear-gradient(135deg, #ff6a00, #ff9a3c);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cajon-proceso .numero {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0.2;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.cajon-proceso h3 {
+    margin-top: 40px;
+    font-size: 1.5rem;
+}
+
+.cajon-proceso p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Efecto hover */
+.cajon-proceso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Brillo animado */
+.cajon-proceso::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-25deg);
+}
+
+.cajon-proceso:hover::after {
+    animation: shine 0.7s forwards;
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+/* Colores diferentes para cada cajón */
+.cajon-1 { background: linear-gradient(135deg, #ff7a00, #ffbb33); }
+.cajon-2 { background: linear-gradient(135deg, #0072ff, #00c6ff); }
+.cajon-3 { background: linear-gradient(135deg, #00b09b, #96c93d); }
+.cajon-4 { background: linear-gradient(135deg, #ff416c, #ff4b2b); }
+
+#fondo-animado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Siempre detrás del contenido */
+    pointer-events: none; /* No bloquea clics */
+}
+/* Fondo oscuro al abrir */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caja blanca del formulario */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  animation: slideDown 0.3s ease;
+}
+
+/* Botón cerrar */
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Inputs y botón */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+form button {
+  background: orange;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    max-width: 500px;
+    margin: 10% auto;
+    border-radius: 8px;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+#network-bg {
+  width: 100%;
+  height: 200px; /* o el alto que quieras */
+  display: block;
+}
+
+
+.banner-video {
+    width: 100%;
+    height: 250px; /* Ajusta la altura según lo que quieras */
+    overflow: hidden;
+}
+
+.banner-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que llene todo sin deformarse */
+}
+
+
+
+/* Banner de cookies reducido */
+.cc-window {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    border-radius: 6px;
+    padding: 8px !important;
+    max-width: 280px;
+    box-shadow: 0 2px 8px rgb(255, 255, 255);
+}
+
+.cc-btn {
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.cc-btn.cc-deny {
+    background-color: #ff7a00 !important;
+}
+
+.cc-btn.cc-customize {
+    background-color: #ff7a00 !important;
+}
+
+/* Chat Crisp en la izquierda */
+.crisp-client {
+    right: auto !important;
+    left: 20px !important;
+    bottom: 80px !important; /* margen con banner */
+}
+
+@media screen and (max-width: 768px) {
+    .crisp-client {
+        bottom: 100px !important;
+    }
+}
+
+
+/* ====== Banner de cookies ====== */
+.cc-window {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cc-banner {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+.cc-compliance button {
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+/* Botón principal */
+.cc-btn.cc-allow {
+  background-color: #ff7a00 !important;
+  color: #ffffff !important;
+}
+.cc-btn.cc-allow:hover {
+  background-color: #e86c00 !important;
+}
+
+/* Botón rechazar */
+.cc-btn.cc-deny {
+  background-color: #cccccc !important;
+  color: #333333 !important;
+}
+.cc-btn.cc-deny:hover {
+  background-color: #bbbbbb !important;
+}
+
+/* ====== Modal de preferencias ====== */
+.cc-revoke {
+  background: #ff7a00 !important;
+  color: white !important;
+  border-radius: 5px;
+}
+
+/* Contenedor del modal */
+.cc-prefs {
+  background: #ffffff !important;
+  border-radius: 10px;
+  padding: 20px;
+  color: #333333 !important;
+}
+
+/* Títulos */
+.cc-prefs h2, .cc-prefs h3 {
+  color: #ff7a00 !important;
+}
+
+/* Texto descriptivo */
+.cc-prefs p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Switches de categorías */
+.cc-prefs input[type="checkbox"] {
+  accent-color: #ff7a00;
+}
+
+/* Botón aceptar todo en modal */
+.cc-prefs .cc-btn.cc-allow {
+  background-color: #ff7a00 !important;
+  color: white !important;
+}
+.cc-prefs .cc-btn.cc-allow:hover {
+  background-color: #e86c00 !important;
+}
+
+/* Botón rechazar todo en modal */
+.cc-prefs .cc-btn.cc-deny {
+  background-color: #cccccc !important;
+  color: #333333 !important;
+}
+.cc-prefs .cc-btn.cc-deny:hover {
+  background-color: #bbbbbb !important;
+}
+
+/* Fondo del modal */
+.cookie-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Contenido del modal */
+.cookie-modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  text-align: left;
+}
+
+/* Cerrar botón */
+.cookie-close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.cookie-option {
+  margin: 10px 0;
+}
+
+#guardar-cookies {
+  background: #ff7a00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#guardar-cookies:hover {
+  background: #e86b00;
+}
+.about-text {
+  max-width: 800px;  /* para que no se extienda demasiado */
+  margin: 0 auto;    /* centra horizontalmente */
+  text-align: justify; /* justifica el texto */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
